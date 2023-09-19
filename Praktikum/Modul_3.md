@@ -42,10 +42,14 @@ menghapus data, menampilkan form, sampai mengolah session.
 
 # Langkah Percobaan
 ## Percobaan instalasi NodeJS
-1. Buka halaman ```https://nodejs.org/en```
-2. Download dan jalankan node setup
+1. Buka halaman ```https://nodejs.org/en``` <br><br>
+![](../Screenshot_3/1.png) <br>
+2. Download dan jalankan node setup <br><br>
+![](../Screenshot_3/2.png) <br> 
+![](../Screenshot_3/3.png) <br>
+![](../Screenshot_3/4.png) <br>
 3. Setelah instalasi selesai jalankan command ```node -v``` untuk memeriksa apakah NodeJS sudah terinstall <br><br>
-![](../Screenshot_3/3.jpeg)
+![](../Screenshot_3/5.png) <br>
 
 ## Inisiasi project Express dan pemasangan package
 1. Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam folder tersebut lalu buka melalui text editor masing-masing.

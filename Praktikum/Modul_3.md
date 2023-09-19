@@ -60,18 +60,25 @@ menghapus data, menampilkan form, sampai mengolah session.
 ![](../Screenshot_3/8.png) <br>
 
 ## Koneksi Express ke MongoDB
-1. Buatlah file index.js pada root folder dan masukkan kode di bawah ini.
-   `aaaaaaaaaaaaaaaaaaaaaaa` <br>
-   Setelah itu coba jalankan aplikasi dengan command ```node index.js```
+1. Buatlah file index.js pada root folder dan masukkan kode di bawah ini. <br>
+   `aaaaaaaaaaaaaaaaaaaaaaa` <br><br>
+   ![](../Screenshot_3/9.png) <br>
+   Setelah itu coba jalankan aplikasi dengan command ```node index.js```<br><br>
+   ![](../Screenshot_3/10.png) <br>
 2. Lakukan pembuatan file **.env** dan masukkan baris berikut : <br>
-   `PORT = 5000` <br>
+   `PORT = 5000` <br><br>
+   ![](../Screenshot_3/11.png) <br><br>
    Setelah itu ubahlah kode pada listening port menjadi berikut dan coba jalankan aplikasi kembali <br>
-   `aaaaaaaaaaaaaaaaaaaaaaa`
-3. Copy connection string yang terdapat pada compas atau atlas dan paste kan pada **.env** seperti berikut : <br>
-   `MONGO_URI=<Connection string masing-masing>` <br>
-4. Tambahkan baris kode berikut pada file index.js <br>
-   `aaaaaaaaaaaaaaaaaaa` <br>
-   Setelah itu coba jalankan aplikasi kembali
+   `aaaaaaaaaaaaaaaaaaaaaaa` <br><br>
+   ![](../Screenshot_3/12.png) <br><br>
+4. Copy connection string yang terdapat pada compas atau atlas dan paste kan pada **.env** seperti berikut : <br>
+   `MONGO_URI=<Connection string masing-masing>` <br><br>
+   ![](../Screenshot_3/13.png) <br><br>
+5. Tambahkan baris kode berikut pada file index.js <br>
+   `aaaaaaaaaaaaaaaaaaa` <br><br>
+   ![](../Screenshot_3/14.png) <br><br>
+   Setelah itu coba jalankan aplikasi kembali <br><br>
+   ![](../Screenshot_3/15.png) <br>
 
 ## Pembuatan routing 
 1. Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js.

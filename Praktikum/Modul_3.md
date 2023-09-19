@@ -52,9 +52,12 @@ menghapus data, menampilkan form, sampai mengolah session.
 ![](../Screenshot_3/5.png) <br>
 
 ## Inisiasi project Express dan pemasangan package
-1. Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam folder tersebut lalu buka melalui text editor masing-masing.
-2. Lakukan npm init untuk mengenerate file package.json dengan menggunakan command ```npm init -y```.
-3. Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command ```npm i express mongoose dotenv```.
+1. Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam folder tersebut lalu buka melalui text editor masing-masing. <br><br>
+![](../Screenshot_3/6.png) <br>
+2. Lakukan npm init untuk mengenerate file package.json dengan menggunakan command ```npm init -y```. <br><br>
+![](../Screenshot_3/7.png) <br>
+3. Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command ```npm i express mongoose dotenv```. <br><br>
+![](../Screenshot_3/8.png) <br>
 
 ## Koneksi Express ke MongoDB
 1. Buatlah file index.js pada root folder dan masukkan kode di bawah ini.

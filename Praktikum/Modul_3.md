@@ -49,7 +49,7 @@ menghapus data, menampilkan form, sampai mengolah session.
 ![](../Screenshot_3/3.png) <br>
 ![](../Screenshot_3/4.png) <br>
 3. Setelah instalasi selesai jalankan command ```node -v``` untuk memeriksa apakah NodeJS sudah terinstall <br><br>
-![](../Screenshot_3/5.png) 
+![](../Screenshot_3/5.png) <br>
 
 ## Inisiasi project Express dan pemasangan package
 1. Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam folder tersebut lalu buka melalui text editor masing-masing.

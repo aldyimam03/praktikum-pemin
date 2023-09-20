@@ -1,4 +1,4 @@
-# Dasar Teori 
+![image](https://github.com/aldyimam03/praktikum-pemin/assets/112538993/48968a14-2ffa-426e-87a5-5b8805707be0)# Dasar Teori 
 
 ## Express
 Express.js adalah framework web app untuk Node.js yang ditulis dengan bahasa
@@ -147,10 +147,13 @@ Berikut adalah gambaran bentuk data dari modul sebelumnya <br>
  	</tr>
  </table>
 
- 1. Lakukan pembuatan direktori models di tingkat yang sama dengan index.js
- 2. Buatlah file book.model.js di dalamnya
+ 1. Lakukan pembuatan direktori models di tingkat yang sama dengan index.js <br><br>
+![](../Screenshot_3/29.png) <br><br>
+ 2. Buatlah file book.model.js di dalamnya <br><br>
+![](../Screenshot_3/30.png) <br><br>
  3. Tambahkan baris kode berikut sesuai dengan tabel di atas <br>
-    `aaaaaaaa`
+    `aaaaaaaa`<br><br>
+![](../Screenshot_3/31.png) <br><br>
 
 ## Operasi CRUD 
 1. Hapus semua data pada collection books

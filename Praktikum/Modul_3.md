@@ -81,15 +81,21 @@ menghapus data, menampilkan form, sampai mengolah session.
    ![](../Screenshot_3/15.png) <br>
 
 ## Pembuatan routing 
-1. Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js.
-2. Buatlah file book.route.js di dalamnya
+1. Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js. <br><br>
+![](../Screenshot_3/16.png) <br><br>
+2. Buatlah file book.route.js di dalamnya<br><br>
+![](../Screenshot_3/17.png) <br><br>
 3. Tambahkan baris kode berikut untuk fungsi getAllBooks <br>
-   `aaaaaaaaaaaa`
+   `aaaaaaaaaaaa`<br><br>
+![](../Screenshot_3/18.png) <br><br>
 4. Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan deleteBook <br>
-   `aaaaaaaaaaaa`
+   `aaaaaaaaaaaa`<br><br>
+![](../Screenshot_3/19.png) <br><br>
 5. Lakukan import book.route.js pada file index.js dan tambahkan baris kode berikut : <br>
-   `aaaaaaaaaaaa`
-6. Uji salah satu endpoint dengan Postman
+   `aaaaaaaaaaaa`<br><br>
+![](../Screenshot_3/20.png) <br><br>
+6. Uji salah satu endpoint dengan Postman<br><br>
+![](../Screenshot_3/21.png) <br><br>
 
 ## Pembuatan controller
 1. Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js.

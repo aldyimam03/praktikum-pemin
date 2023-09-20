@@ -98,17 +98,24 @@ menghapus data, menampilkan form, sampai mengolah session.
 ![](../Screenshot_3/21.png) <br><br>
 
 ## Pembuatan controller
-1. Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js.
-2. Buatlah file book.controller.js di dalamnya
-3. Salin baris kode dari routes untuk fungsi getAllBooks <br>
-   `aaaaaaaaaa`
+1. Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js. <br><br>
+![](../Screenshot_3/22.png) <br><br>
+2. Buatlah file book.controller.js di dalamnya <br><br>
+![](../Screenshot_3/23.png) <br><br>
+3. Salin baris kode dari routes untuk fungsi getAllBooks <br> 
+   `aaaaaaaaaa` <br>
+![](../Screenshot_3/24.png) <br><br>
 4. Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan deleteBook <br>
-   `aaaaaaaaaa`
+   `aaaaaaaaaa` <br><br>
+![](../Screenshot_3/25.png) <br><br>
 5. Lakukan import book.controller.js pada file book.route.js <br>
-   `aaaaaaaaaa`
+   `aaaaaaaaaa` <br><br>
+![](../Screenshot_3/26.png) <br><br>
 6. Lakukan perubahan pada fungsi agar dapat memanggil fungsi dari book.controller.js <br>
-   `aaaaaaaaaa`
-7. Lakukan pengujian kembali, pastikan response tetap sama
+   `aaaaaaaaaa` <br><br>
+![](../Screenshot_3/27.png) <br><br>
+7. Lakukan pengujian kembali, pastikan response tetap sama <br>
+![](../Screenshot_3/28.png) <br><br>
 
 ## Pembuatan model
 Berikut adalah gambaran bentuk data dari modul sebelumnya <br>

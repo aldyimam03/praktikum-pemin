@@ -156,22 +156,36 @@ Berikut adalah gambaran bentuk data dari modul sebelumnya <br>
 ![](../Screenshot_3/31.png) <br><br>
 
 ## Operasi CRUD 
-1. Hapus semua data pada collection books
+1. Hapus semua data pada collection books <br><br>
+![](../Screenshot_3/32.png) <br><br>
 2. Lakukan import book.model.js pada file book.controller.js <br>
-   `aaaaaa`
+   `aaaaaa` <br><br>
+![](../Screenshot_3/33.png) <br><br>
 3. Lakukan perubahan pada fungsi createBook <br>
-   `aaaaaa`
+   `aaaaaa` <br><br>
+![](../Screenshot_3/34.png) <br><br>
 4. Buatlah dua buah buku dengan data di bawah ini dengan Postman <br>
-   `aaaaaa`
+   `aaaaaa` <br><br>
+![](../Screenshot_3/35.png) <br><br>
+![](../Screenshot_3/36.png) <br><br>
 5. Lakukan perubahan pada fungsi getAllBooks <br>
-   `aaaaaa`
+   `aaaaaa` <br><br>
+![](../Screenshot_3/37.png) <br><br>
 6. Lakukan perubahan pada fungsi getOneBook <br>
-   `aaaaaa`
-7. Tampilkan semua buku dengan Postman
-8. Tampilkan buku Dilan 1990 dengan Postman
+   `aaaaaa` <br><br>
+![](../Screenshot_3/38.png) <br><br>
+7. Tampilkan semua buku dengan Postman <br><br>
+![](../Screenshot_3/39.png) <br><br>
+8. Tampilkan buku Dilan 1990 dengan Postman <br><br>
+![](../Screenshot_3/40.png) <br><br>
 9. Lakukan perubahan pada fungsi updateBook <br>
-   `aaaaaa`
-10. Ubah judul buku Dilan 1991 menjadi “NAMA PANGGILAN 1991” dengan Postman
+   `aaaaaa` <br><br>
+![](../Screenshot_3/41.png) <br><br>
+10. Ubah judul buku Dilan 1991 menjadi “NAMA PANGGILAN 1991” dengan Postman <br><br>
+![](../Screenshot_3/42.png) <br><br>
 11. Lakukan perubahan pada fungsi deleteBook <br>
-   `aaaaaaa`
-12. Hapus buku Dilan 1990 dengan Postman.
+   `aaaaaaa` <br><br>
+![](../Screenshot_3/43.png) <br><br>
+12. Hapus buku Dilan 1990 dengan Postman.<br><br>
+![](../Screenshot_3/44.png) <br><br>
+![](../Screenshot_3/45.png) <br><br>

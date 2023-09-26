@@ -1,4 +1,4 @@
-![image](https://github.com/aldyimam03/praktikum-pemin/assets/112538993/12b4ae9e-aa5c-44cb-bc11-0cc16e05d994)## Langkah Percobaan
+## Langkah Percobaan
 1. GET <br><br>
    Untuk menambahkan endpoint dengan method GET pada aplikasi kita, kita dapat mengunjungi file     web.php pada folder routes. Kemudian tambahkan baris ini pada akhir file <br><br>
 ```

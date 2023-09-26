@@ -1,4 +1,4 @@
-## Langkah Percobaan
+![image](https://github.com/aldyimam03/praktikum-pemin/assets/112538993/12b4ae9e-aa5c-44cb-bc11-0cc16e05d994)## Langkah Percobaan
 1. GET <br><br>
    Untuk menambahkan endpoint dengan method GET pada aplikasi kita, kita dapat mengunjungi file     web.php pada folder routes. Kemudian tambahkan baris ini pada akhir file <br><br>
 ```
@@ -57,6 +57,7 @@ Setelah selesai menambahkan route untuk method POST, PUT, PATCH, DELETE, dan OPT
 
 3. Migrasi Database <br><br>
    -  Sebelum melakukan migrasi database pastikan server database aktif kemudian pastikan sudah membuat database dengan nama ```lumenapi```
+   ![](../Screenshot_4/9.png) <br><br>
    -  Kemudian ubah konfigurasi database pada file .env menjadi seperti ini
       ```
       DB_CONNECTION=mysql
@@ -66,6 +67,8 @@ Setelah selesai menambahkan route untuk method POST, PUT, PATCH, DELETE, dan OPT
       DB_USERNAME=root
       DB_PASSWORD=<<password masing-masing>>
       ```
+      <br>
+     ![](../Screenshot_4/10.png) <br><br>
    -  Setelah mengubah konfigurasi pada file .env, kita juga perlu menghidupkan beberapa library bawaan dari lumen dengan membuka file app.php pada folder bootstrap dan mengubah baris ini :
       ```
       //$app->withFacades();
@@ -76,11 +79,13 @@ Setelah selesai menambahkan route untuk method POST, PUT, PATCH, DELETE, dan OPT
       $app->withFacades();
       $app->withEloquent();
       ```
+     ![](../Screenshot_4/11.png) <br><br>
     - Setelah itu jalankan command berikut untuk membuat file migration :
       ```
       php artisan make:migration create_users_table # membuat migrasi untuk tabel users
       php artisan make:migration create_products_table # membuat migrasi untuk tabel products
       ```
+     ![](../Screenshot_4/13.png) <br><br>
     - Ubah fungsi up pada file migrasi ```create_users_table```
       ```
       # sebelumnya
@@ -107,6 +112,7 @@ Setelah selesai menambahkan route untuk method POST, PUT, PATCH, DELETE, dan OPT
       }
       ...
       ```
+    ![](../Screenshot_4/13.png) <br><br>
     - Ubah fungsi up pada file migrasi ```create_products_table```
       ```
       # sebelumnya
@@ -136,7 +142,11 @@ Setelah selesai menambahkan route untuk method POST, PUT, PATCH, DELETE, dan OPT
       }
       ...
       ```
+    ![](../Screenshot_4/14.png) <br><br>
     - Kemudian jalankan command :
       ```
       php artisan migrate
       ```
+    ![](../Screenshot_4/15.png) <br><br>
+    ![](../Screenshot_4/16.png) <br><br>
+    

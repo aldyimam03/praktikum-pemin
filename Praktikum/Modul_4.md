@@ -42,12 +42,17 @@ $router->options('/options', function () {
     return 'OPTIONS';
 });
 ```
+![](../Screenshot_4/4.png) <br><br>
 Setelah selesai menambahkan route untuk method POST, PUT, PATCH, DELETE, dan OPTIONS, kita dapat menjalankan server seperti pada saat percobaan GET. Setelah server berhasil menyala, kita dapat membuka aplikasi Postman atau Insomnia atau kita juga dapat menggunakan PowerShell (Windows) / Terminal (Linux atau Mac) untuk melakukan request ke server. Namun, pada percobaan kali ini kita akan menggunakan extensions pada VSCode yaitu Thunder Client. <br><br>
 
 - Kita dapat menginstall ekstensi dengan membuka panel extensions lalu mencari thunder client <br><br>
+![](../Screenshot_4/5.png) <br><br>
 - Setelah menginstall Thunder Client, kita akan melihat logo seperti petir pada activity bar kita (sebelah kiri) <br><br>
+![](../Screenshot_4/6.png) <br><br>
 - Kita dapat membuat request dengan menekan "New Request" pada ekstensi <br><br>
+![](../Screenshot_4/7.png) <br><br>
 - Setelah itu kita dapat memasukkan method dan url yang dituju <br><br>
+![](../Screenshot_4/8.png) <br><br>
 - Akses url yang baru saja ditambahkan pada aplikasi dengan methodnya <br><br>
 
 3. Migrasi Database <br><br>

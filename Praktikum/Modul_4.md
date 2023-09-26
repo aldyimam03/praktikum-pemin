@@ -7,16 +7,19 @@ $router->get('/get', function () {
   return 'GET';
 });
 ```
+![](../Screenshot_3/1.png) <br><br>
   Setelah itu coba jalankan aplikasi dengan command,
 ```
 php -S localhost:8000 -t public
 ```
+![](../Screenshot_3/2.png) <br><br>
   ***Note : Pastikan buka cmd pada folder aplikasi*** <br>
   
 Setelah aplikasi berhasil dijalankan, kita dapat membuka browser dengan url, 
 ```
 http://localhost:8000/get
 ```
+![](../Screenshot_3/3.png) <br><br>
 path yang akan kita akses akan berbentuk demikian, ```http://{BASE_URL}{PATH}``` , jika BASE_URL kita adalah ```localhost:8000``` dan PATH kita adalah ```/get``` , maka url akan berbentuk seperti diatas.
 
 2. POST, PUT, PATCH, DELETE, dan OPTIONS <br><br>

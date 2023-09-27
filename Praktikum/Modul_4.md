@@ -54,7 +54,12 @@ Setelah selesai menambahkan route untuk method POST, PUT, PATCH, DELETE, dan OPT
 - Setelah itu kita dapat memasukkan method dan url yang dituju <br><br>
 ![](../Screenshot_4/8.png) <br><br>
 - Akses url yang baru saja ditambahkan pada aplikasi dengan methodnya <br><br>
-
+![](../Screenshot_4/8_1.png) <br><br>
+![](../Screenshot_4/8_2.png) <br><br>
+![](../Screenshot_4/8_3.png) <br><br>
+![](../Screenshot_4/8_4).png) <br><br>
+![](../Screenshot_4/8_5.png) <br><br>
+![](../Screenshot_4/8_6.png) <br><br>
 3. Migrasi Database <br><br>
    -  Sebelum melakukan migrasi database pastikan server database aktif kemudian pastikan sudah membuat database dengan nama ```lumenapi```
    ![](../Screenshot_4/9.png) <br><br>

@@ -96,7 +96,7 @@ class AgeMiddleware
     }
 }
 ```
-
+![](../Screenshot_5/6.png) <br><br>
 Kemudian, setelah menambahkan filter pada ```AgeMiddleware``` , kita harus mendaftarkan
 ```AgeMiddleware``` pada aplikasi kita, pada file ```bootstrap/app.php``` seperti berikut ini :
 
@@ -114,7 +114,7 @@ Kemudian, setelah menambahkan filter pada ```AgeMiddleware``` , kita harus menda
 83
 84 ...
 ```
-
+![](../Screenshot_5/7.png) <br><br>
 Pada baris 65 terdapat comment mengenai proses mendaftarkan suatu middleware dalam aplikasi kita. Untuk menambahkan middleware pada aplikasi kita, kita dapat men-uncomment baris 75 hingga 77, kemudian menambahkan age middleware ke dalamnya.
 
 Namun, karena kita hanya ingin menambahkan middleware pada route tertentu, kita akan
@@ -132,3 +132,4 @@ $router->get('/fail', function () {
   return 'Dibawah umur';
 });
 ```
+![](../Screenshot_5/8.png) <br><br>

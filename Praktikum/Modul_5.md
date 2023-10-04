@@ -20,6 +20,8 @@ $router->get('/user/{id}', function ($id) {
   return 'User Id = ' . $id;
 });
 ```
+![](../Screenshot_5/1.png) <br><br>
+![](../Screenshot_5/1_1.png) <br><br>
 Saat menambahkan parameter pada routes, kita tidak terbatas pada 1 variable saja, namun
 kita dapat menambahkan sebanyak yang diperlukan seperti kode berikut : 
 ```
@@ -27,12 +29,17 @@ $router->get('/post/{postId}/comments/{commentId}', function ($postId, $commentI
   return 'Post ID = ' . $postId . ' Comments ID = ' . $commentId;
 });
 ```
+![](../Screenshot_5/2.png) <br><br>
+![](../Screenshot_5/2_1.png) <br><br>
 Pada dynamic routes kita juga bisa menambahkan optional routes, yang mana optional routes tidak mengharuskan kita untuk memberi variable pada endpoint kita, namun saat kita memanggil endpoint, dapat menggunakan parameter variable ataupun tidak, seperti pada kode dibawah ini : 
 ```
 $router->get('/users[/{userId}]', function ($userId = null) {
   return $userId === null ? 'Data semua users' : 'Data user dengan id ' . $userId;
 });
 ```
+![](../Screenshot_5/3.png) <br><br>
+![](../Screenshot_5/3_1.png) <br><br>
+![](../Screenshot_5/3_2.png) <br><br>
 2. Aliases Route
    
 Aliases Route digunakan untuk memberi nama pada route yang telah kita buat, hal ini dapat membantu kita, saat kita ingin memanggil route tersebut pada aplikasi kita. Berikut syntax untuk menambahkan aliases route
@@ -45,6 +52,9 @@ $router->get('/profile', function (Request $request) {
   }
 });
 ```
+![](../Screenshot_5/4.png) <br><br>
+![](../Screenshot_5/4_1.png) <br><br>
+![](../Screenshot_5/4_2.png) <br><br>
 3. Group Route
    
 Pada lumen, kita juga dapat memberikan grouping pada routes kita agar lebih mudah pada saat penulisan route pada web.php kita. Kita dapat melakukan grouping dengan menggunakan syntax berikut :
@@ -55,6 +65,8 @@ $router->group(['prefix' => 'users'], function () use ($router) {
   });
 });
 ```
+![](../Screenshot_5/5.png) <br><br>
+![](../Screenshot_5/5_1.png) <br><br>
 Selain dapat mengelompokkan prefix, kita juga dapat mengelompokkan middleware dan
 namespace pada kelompok routes kita.
 

@@ -219,6 +219,7 @@ use App\Models\User; // import model User
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 ```
+![](../Screenshot_6/12.png) <br><br>
 2. Tambahkan ketiga fungsi berikut di HomeController.php
 ```
 <?php
@@ -284,6 +285,8 @@ public function getUsers()
 // Tiga Fungsi
 }
 ```
+![](../Screenshot_6/13.png) <br><br>
+![](../Screenshot_6/13_1.png) <br><br>
 3. Tambahkan ketiga route pada file routes/web.php menggunakan group route
 ```
 $router->get('/', ['uses' => 'HomeController@index']);
@@ -295,7 +298,9 @@ $router->group(['prefix' => 'users'], function () use ($router) {
     $router->get('/all', ['uses' => 'HomeController@getUsers']);
 });
 ```
+![](../Screenshot_6/14.png) <br><br>
 4. Jalankan aplikasi pada route /users/default menggunakan Postman
+![](../Screenshot_6/15.png) <br><br>
 5. Jalankan aplikasi pada route /users/new dengan mengisi body sebagai berikut
 <table>
  	<tr>
@@ -312,4 +317,6 @@ $router->group(['prefix' => 'users'], function () use ($router) {
  	</tr>
  </table>
  
+ ![](../Screenshot_6/16.png) <br><br>
 6. Jalankan aplikasi pada route /users/all
+![](../Screenshot_6/17.png) <br><br>

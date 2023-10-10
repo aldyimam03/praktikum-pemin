@@ -36,7 +36,24 @@ header.
 
 ## Langkah Percobaan 
 ### Model 
-1. Pastikan terdapat tabel users yang dibuat menggunakan migration pada bab sebelumnya. Berikut informasi kolom yang harus ada
+1. Pastikan terdapat tabel users yang dibuat menggunakan migration pada bab sebelumnya. Berikut informasi kolom yang harus ada : 
+<table>
+ 	<tr>
+ 		<td> id </td>
+ 	</tr>
+ 	<tr>
+ 		<td> createdAt </td>
+ 	</tr>
+  <tr>
+ 		<td> updateAt </td>
+ 	</tr>
+  <tr>
+ 		<td> name </td>
+ 	</tr>
+  <tr>
+ 		<td> email </td>
+ 	</tr>
+ </table>
 2. Bersihkan isi User.php yang ada sebelumnya dan isi dengan baris kode berikut : 
 ```
 <?php
@@ -272,4 +289,18 @@ $router->group(['prefix' => 'users'], function () use ($router) {
 ```
 4. Jalankan aplikasi pada route /users/default menggunakan Postman
 5. Jalankan aplikasi pada route /users/new dengan mengisi body sebagai berikut
+<table>
+ 	<tr>
+ 		<td> name </td>
+ 		<td> Cyno </td>
+ 	</tr>
+ 	<tr>
+ 		<td> email </td>
+ 		<td> cyno@akademiya.ac.id </td>
+ 	</tr>
+  <tr>
+ 		<td> password </td>
+ 		<td> mahamatra </td>
+ 	</tr>
+ </table>
 6. Jalankan aplikasi pada route /users/all

@@ -303,4 +303,5 @@ $router->group(['prefix' => 'users'], function () use ($router) {
  		<td> mahamatra </td>
  	</tr>
  </table>
+ 
 6. Jalankan aplikasi pada route /users/all

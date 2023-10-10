@@ -127,6 +127,7 @@ namespace App\Http\Controllers;
 // Import Library Request
 use Illuminate\Http\Request;
 ```
+![](../Screenshot_6/5.png) <br><br>
 2. Ubah fungsi index menjadi : 
 ```
 <?php
@@ -152,8 +153,9 @@ class HomeController extends Controller
   //
 }
 ```
+![](../Screenshot_6/6.png) <br><br>
 3. Jalankan aplikasi
-
+![](../Screenshot_6/7.png) <br><br>
 ### Response Handler
 1. Lakukan import library Response dengan menambahkan baris berikut di bagian atas file
 ```

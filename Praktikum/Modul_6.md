@@ -78,7 +78,7 @@ class User extends Model
   protected $hidden = [];
 }
 ```
-
+![](../Screenshot_6/1.png) <br><br>
 ### Controller 
 1. Buatlah salinan ExampleController.php pada folder app/Http/Controllers dengan nama HomeController.php dan buatlah fungsi index() yang berisi :
 ```
@@ -104,6 +104,7 @@ class HomeController extends Controller
   //
 }
 ```
+![](../Screenshot_6/2.png) <br><br>
 2. Ubah route / pada file routes/web.php menjadi seperti ini :
 ```
 # Sebelum,
@@ -114,8 +115,9 @@ $router->get('/', function () use ($router) {
 # Setelah,
 $router->get('/', ['uses' => 'HomeController@index']);
 ```
+![](../Screenshot_6/3.png) <br><br>
 3. Jalankan aplikasi
-
+![](../Screenshot_6/4.png) <br><br>
 ### Request Handler
 1. Lakukan import library Request dengan menambahkan baris berikut di bagian atas file
 ```

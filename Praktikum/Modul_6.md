@@ -165,6 +165,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response; // import library Response
 ```
+![](../Screenshot_6/8.png) <br><br>
 2. Buatlah fungsi hello() yang berisi
 ```
 <?php
@@ -198,14 +199,16 @@ class HomeController extends Controller
   }
 }
 ```
+![](../Screenshot_6/9.png) <br><br>
 3. Tambahkan route /hello pada file routes/web.php
 ```
 <?php
 $router->get('/', ['uses' => 'HomeController@index']);
 $router->get('/hello', ['uses' => 'HomeController@hello']); // route hello
 ```
+![](../Screenshot_6/10.png) <br><br>
 4. Jalankan aplikasi pada route /hello
-
+![](../Screenshot_6/11.png) <br><br>
 ### Penerapan 
 1. Lakukan import model User dengan menambahkan baris berikut di bagian atas file
 ```

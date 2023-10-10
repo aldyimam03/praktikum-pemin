@@ -55,6 +55,7 @@ header.
  	</tr>
  </table>
 2. Bersihkan isi User.php yang ada sebelumnya dan isi dengan baris kode berikut : 
+
 ```
 <?php
 namespace App\Models;

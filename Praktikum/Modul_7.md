@@ -190,8 +190,10 @@ php artisan migrate
 1. Buatlah file dengan nama Post.php dan isi dengan baris kode berikut : 
 ```
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+
 class Post extends Model
 {
   /**
@@ -213,8 +215,10 @@ class Post extends Model
 2. Buatlah file dengan nama Comment.php dan isi dengan baris kode berikut : 
 ```
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+
 class Comment extends Model
 {
   /**
@@ -236,8 +240,10 @@ class Comment extends Model
 3.Buatlah file dengan nama Tag.php dan isi dengan baris kode berikut : 
 ```
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+
 class Tag extends Model
 {
   /**
@@ -261,8 +267,10 @@ class Tag extends Model
 1. Tambahkan fungsi comments() pada file Post.php : 
 ```
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+
 class Post extends Model
 {
 ...
@@ -276,8 +284,10 @@ public function comments()
 2. Tambahkan fungsi post() dan atribut postId pada $fillable pada file Comment.php : 
 ```
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+
 class Comment extends Model
 {
 ...
@@ -300,9 +310,11 @@ class Comment extends Model
 3. Buatlah file PostController.php dan isilah dengan baris kode berikut : 
 ```
 <?php
+
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
+
 class PostController extends Controller
 {
   /**
@@ -349,6 +361,7 @@ public function getPostById(Request $request)
 4. Buatlah file CommentController.php dan isilah dengan baris kode berikut :
 ```
 <?php
+
 namespace App\Http\Controllers;
 use App\Models\Comment;
 use Illuminate\Http\Request;
@@ -409,9 +422,10 @@ $router->group(['prefix' => 'comments'], function () use ($router) {
 1. Tambahkan fungsi tags() pada file Post.php :
 ```
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
-Relasi One-to-Many dan Many-to-Many 15
+
 class Post extends Model
 {
   ...
@@ -424,6 +438,7 @@ class Post extends Model
 2. Tambahkan fungsi posts() pada file Tag.php :
 ```
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
@@ -438,72 +453,75 @@ class Tag extends Model
 3. Buatlah file TagController.php dan isilah dengan baris kode berikut :
 ```
 <?php
+
 namespace App\Http\Controllers;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+
 class TagController extends Controller
 {
-/**
-* Create a new controller instance.
-*
-* @return void
-*/
-public function __construct()
-{
-//
-
-//
-public function createTag(Request $request)
-{
-$tag = Tag::create([
-'name' => $request->name
-]);
-return response()->json([
-'success' => true,
-'message' => 'New tag created',
-'data' => [
-'tag' => $tag
-]
-]);
-}
-}
+  /**
+  * Create a new controller instance.
+  *
+  * @return void
+  */
+  public function __construct()
+  {
+      //
+  }
+  //
+  public function createTag(Request $request)
+  {
+      $tag = Tag::create([
+        'name' => $request->name
+      ]);
+      return response()->json([
+          'success' => true,
+          'message' => 'New tag created',
+          'data' => [
+              'tag' => $tag
+          ]
+      ]);
+  }
 }
 ```
 4. Tambahkan fungsi addTag dan response tags pada PostController.php :
 ```
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Models\Post;
 use Illuminate\Http\Request;
+
 class PostController extends Controller
 {
-...
-public function getPostById(Request $request)
-{
-$post = Post::find($request->id);
-return response()->json([
-'success' => true,
-'message' => 'All post grabbed',
-'data' => [
-'post' => [
-'id' => $post->id,
-'content' => $post->content,
-'comments' => $post->comments,
-'tags' => $post->tags, //response tags
-]
-]
-]);
-}
-public function addTag(Request $request)
-{
-
-$post = Post::find($request->id);
-$post->tags()->attach($request->tagId);
-return response()->json([
-'success' => true,
-'message' => 'Tag added to post',
-]);
-}
+    ...
+    public function getPostById(Request $request)
+    {
+        $post = Post::find($request->id);
+        return response()->json([
+            'success' => true,
+            'message' => 'All post grabbed',
+            'data' => [
+                'post' => [
+                    'id' => $post->id,
+                    'content' => $post->content,
+                    'comments' => $post->comments,
+                    'tags' => $post->tags, //response tags
+                ]
+            ]
+        ]);
+    }
+    public function addTag(Request $request)
+    {
+      $post = Post::find($request->id);
+      $post->tags()->attach($request->tagId);
+      return response()->json([
+          'success' => true,
+          'message' => 'Tag added to post',
+      ]);
+    }
 }
 ```
 5. Tambahkan baris berikut pada routes/web.php :

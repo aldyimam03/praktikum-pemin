@@ -25,7 +25,7 @@ berada di satu tutorial
 * Satu dosbing dapat memiliki banyak mahasiswa, namun mahasiswa hanya dapat
 dibimbing satu dosen
 
-(contoh gambar 1)
+![](../Screenshot_7/contoh_gambar_1.png) <br><br>
 
 ### Many-to-Many
 Relasi yang menunjukkan hubungan antar tabel dimana baris pada tabel induk dapat
@@ -38,7 +38,7 @@ dapat diambil banyak mahasiswa
 * Postingan dapat memiliki banyak tag, namun satu tag dapat dimiliki banyak
 postingan.
 
-(contoh gambar 2)
+![](../Screenshot_7/contoh_gambar_2.png) <br><br>
 
 ### Junction Table
 Tabel yang digunakan untuk mengatur kombinasi baris pada relasi many-to-many.

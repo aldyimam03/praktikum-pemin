@@ -53,6 +53,9 @@ atas
 
 1. Sebelum membuat migrasi database atau membuat tabel pastikan server database
 aktif kemudian pastikan sudah membuat database dengan nama ```lumenpost```
+
+![](../Screenshot_7/1.png) <br><br>
+
 2. Kemudian ubah konfigurasi database pada file .env menjadi seperti berikut :
 ```
 DB_CONNECTION=mysql
@@ -62,6 +65,9 @@ DB_DATABASE=lumenpost
 DB_USERNAME=root
 DB_PASSWORD=
 ```
+
+![](../Screenshot_7/2.png) <br><br>
+
 3. Setelah mengubah konfigurasi pada file .env, kita juga perlu menghidupkan
 beberapa library bawaan dari lumen dengan membuka file app.php pada folder
 bootstrap dan mengubah baris ini : 
@@ -74,6 +80,9 @@ menjadi :
 $app->withFacades();
 $app->withEloquent();
 ```
+
+![](../Screenshot_7/3.png) <br><br>
+
 4. Setelah itu jalankan command berikut untuk membuat file migration :
 ```
 php artisan make:migration create_posts_table
@@ -81,6 +90,9 @@ php artisan make:migration create_comments_table
 php artisan make:migration create_tags_table
 php artisan make:migration create_post_tag_table
 ```
+
+![](../Screenshot_7/4.png) <br><br>
+
 5. Ubah fungsi ```up()``` pada file ```migrasi create_post_table``` : 
 ```
 #sebelumnya
@@ -106,6 +118,9 @@ public function up()
   }
 ...
 ```
+
+![](../Screenshot_7/5.png) <br><br>
+
 6. Ubah fungsi ```up()``` pada file ```create_comments_table``` : 
 ```
 #sebelumnya
@@ -132,6 +147,9 @@ public function up()
   }
 ...
 ```
+
+![](../Screenshot_7/6.png) <br><br>
+
 7. Ubah fungsi ```up()``` pada file ```create_tags_table``` :
 ```
 #sebelumnya
@@ -156,6 +174,9 @@ public function up()
   }
 ...
 ```
+
+![](../Screenshot_7/7.png) <br><br>
+
 8. Ubah fungsi ```up()``` pada file ```create_post_tag_table``` :
 ```
 #sebelumnya
@@ -181,10 +202,15 @@ public function up()
   }
 ...
 ```
+
+![](../Screenshot_7/8.png) <br><br>
+
 9. Kemudian jalankan command : 
 ```
 php artisan migrate
 ```
+
+![](../Screenshot_7/9.png) <br><br>
 
 ### Pembuatan Model 
 1. Buatlah file dengan nama Post.php dan isi dengan baris kode berikut : 
@@ -212,6 +238,9 @@ class Post extends Model
   protected $hidden = [];
 }
 ```
+
+![](../Screenshot_7/10.png) <br><br>
+
 2. Buatlah file dengan nama Comment.php dan isi dengan baris kode berikut : 
 ```
 <?php
@@ -237,6 +266,9 @@ class Comment extends Model
   protected $hidden = [];
 }
 ```
+
+![](../Screenshot_7/11.png) <br><br>
+
 3.Buatlah file dengan nama Tag.php dan isi dengan baris kode berikut : 
 ```
 <?php
@@ -263,6 +295,8 @@ class Tag extends Model
 }
 ```
 
+![](../Screenshot_7/12.png) <br><br>
+
 ### Relasi One-to-Many 
 1. Tambahkan fungsi comments() pada file Post.php : 
 ```
@@ -281,6 +315,9 @@ public function comments()
   }
 }
 ```
+
+![](../Screenshot_7/13.png) <br><br>
+
 2. Tambahkan fungsi post() dan atribut postId pada $fillable pada file Comment.php : 
 ```
 <?php
@@ -307,6 +344,9 @@ class Comment extends Model
     }
 }
 ```
+
+![](../Screenshot_7/14.png) <br><br>
+
 3. Buatlah file PostController.php dan isilah dengan baris kode berikut : 
 ```
 <?php
@@ -358,6 +398,9 @@ public function getPostById(Request $request)
 }
 }
 ```
+
+![](../Screenshot_7/15.png) <br><br>
+
 4. Buatlah file CommentController.php dan isilah dengan baris kode berikut :
 ```
 <?php
@@ -394,6 +437,9 @@ class CommentController extends Controller
   }
 }
 ```
+
+![](../Screenshot_7/16.png) <br><br>
+
 5. Tambahkan baris berikut pada routes/web.php : 
 ```
 <?php
@@ -406,17 +452,20 @@ $router->group(['prefix' => 'comments'], function () use ($router) {
     $router->post('/', ['uses' => 'CommentController@createComment']);
 });
 ```
+
+![](../Screenshot_7/17.png) <br><br>
+
 6. Buatlah satu post menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/18.png) <br><br>
 
 7. Buatlah satu comment menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/19.png) <br><br>
 
 8. Tampilkan post menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/20.png) <br><br>
 
 ### Relasi Many-to-Many 
 1. Tambahkan fungsi tags() pada file Post.php :
@@ -435,6 +484,9 @@ class Post extends Model
   }
 }
 ```
+
+![](../Screenshot_7/21.png) <br><br>
+
 2. Tambahkan fungsi posts() pada file Tag.php :
 ```
 <?php
@@ -450,6 +502,9 @@ class Tag extends Model
   }
 }
 ```
+
+![](../Screenshot_7/22.png) <br><br>
+
 3. Buatlah file TagController.php dan isilah dengan baris kode berikut :
 ```
 <?php
@@ -485,6 +540,9 @@ class TagController extends Controller
   }
 }
 ```
+
+![](../Screenshot_7/23.png) <br><br>
+
 4. Tambahkan fungsi addTag dan response tags pada PostController.php :
 ```
 <?php
@@ -524,6 +582,9 @@ class PostController extends Controller
     }
 }
 ```
+
+![](../Screenshot_7/24.png) <br><br>
+
 5. Tambahkan baris berikut pada routes/web.php :
 ```
 $router->group(['prefix' => 'posts'], function () use ($router) {
@@ -536,38 +597,41 @@ $router->group(['prefix' => 'tags'], function () use ($router) {
     $router->post('/', ['uses' => 'TagController@createTag']);
 });
 ```
+
+![](../Screenshot_7/25.png) <br><br>
+
 6. Buatlah satu tag menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/26.png) <br><br>
 
 7. Tambahkan tag “jadul” pada post “disana engkau berdua”
 
-(gambar)
+![](../Screenshot_7/27.png) <br><br>
 
 8. Tampilkan post “disana engkau berdua” menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/28.png) <br><br>
 
 9. Buatlah postingan “tanpamu apa artinya” menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/29.png) <br><br>
 
 10. Tambahkan tag “jadul” pada postingan “tanpamu apa artinya”
 
-(gambar)
+![](../Screenshot_7/30.png) <br><br>
 
 11. Buatlah tag “lagu” menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/31.png) <br><br>
 
 12. Tambahkan tag “lagu” pada postingan “tanpamu apa artinya”
 
-(gambar)
+![](../Screenshot_7/32.png) <br><br>
 
 13. Tampilkan post pertama
 
-(gambar)
+![](../Screenshot_7/33.png) <br><br>
 
 14. Tampilkan post kedua
 
-(gambar)
+![](../Screenshot_7/34.png) <br><br>

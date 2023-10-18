@@ -606,32 +606,32 @@ $router->group(['prefix' => 'tags'], function () use ($router) {
 
 7. Tambahkan tag “jadul” pada post “disana engkau berdua”
 
-(gambar)
+![](../Screenshot_7/27.png) <br><br>
 
 8. Tampilkan post “disana engkau berdua” menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/28.png) <br><br>
 
 9. Buatlah postingan “tanpamu apa artinya” menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/29.png) <br><br>
 
 10. Tambahkan tag “jadul” pada postingan “tanpamu apa artinya”
 
-(gambar)
+![](../Screenshot_7/30.png) <br><br>
 
 11. Buatlah tag “lagu” menggunakan Postman
 
-(gambar)
+![](../Screenshot_7/31.png) <br><br>
 
 12. Tambahkan tag “lagu” pada postingan “tanpamu apa artinya”
 
-(gambar)
+![](../Screenshot_7/32.png) <br><br>
 
 13. Tampilkan post pertama
 
-(gambar)
+![](../Screenshot_7/33.png) <br><br>
 
 14. Tampilkan post kedua
 
-(gambar)
+![](../Screenshot_7/34.png) <br><br>

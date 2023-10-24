@@ -22,8 +22,26 @@ pengguna yang ditentukan.
 1. Pastikan terdapat tabel users yang dibuat menggunakan migration pada bab 3
 Basic Routing dan Migration . Berikut informasi kolom yang harus ada :
 
-(tabel)
-
+<table>
+ 	<tr>
+ 		<td> id </td>
+ 	</tr>
+ 	<tr>
+ 		<td> createdAt </td>
+ 	</tr>
+  <tr>
+ 		<td> updateAt </td>
+ 	</tr>
+  <tr>
+ 		<td> name </td>
+ 	</tr>
+  <tr>
+ 		<td> email </td>
+ 	</tr><tr>
+ 		<td> password </td>
+ 	</tr>
+ </table>
+ 
 2. Pastikan terdapat model User.php yang digunakan pada bab 5 Model, Controller
 dan Request-Response Handler. Berikut baris kode yang harus ada : 
 ```

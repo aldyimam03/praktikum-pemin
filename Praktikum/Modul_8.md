@@ -41,6 +41,8 @@ Basic Routing dan Migration . Berikut informasi kolom yang harus ada :
  		<td> password </td>
  	</tr>
  </table>
+
+ ![](../Screenshot_8/1.png) <br><br>
  
 2. Pastikan terdapat model User.php yang digunakan pada bab 5 Model, Controller
 dan Request-Response Handler. Berikut baris kode yang harus ada : 
@@ -69,6 +71,9 @@ class User extends Model
   protected $hidden = [];
 }
 ```
+
+ ![](../Screenshot_8/2.png) <br><br>
+ 
 3. Buatlah file AuthController.php dan isilah dengan baris kode berikut :
 ```
 <?php
@@ -110,6 +115,9 @@ class AuthController extends Controller
   }
 }
 ```
+
+ ![](../Screenshot_8/3.png) <br><br>
+
 4. Tambahkan baris berikut pada routes/web.php : 
 ```
 <?php
@@ -118,6 +126,9 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
   $router->post('/register', ['uses'=> 'AuthController@register']);
 });
 ```
+
+ ![](../Screenshot_8/4.png) <br><br>
+
 5. Jalankan aplikasi pada endpoint /auth/register dengan body berikut : 
 ```
 {
@@ -126,6 +137,8 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
     "password": "wanderer"
 }
 ```
+
+ ![](../Screenshot_8/5.png) <br><br>
 
 ## Authentication
 1. Buatlah fungsi login(Request $request) pada file AuthController.php : 
@@ -168,6 +181,9 @@ public function login(Request $request)
   }
 }
 ```
+
+ ![](../Screenshot_8/6.png) <br><br>
+
 2. Tambahkan baris berikut pada routes/web.php : 
 ```
 <?php
@@ -177,6 +193,9 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
     $router->post('/login', ['uses'=> 'AuthController@login']); // route login
 });
 ```
+
+ ![](../Screenshot_8/7.png) <br><br>
+
 3. Jalankan aplikasi pada endpoint /auth/login dengan body berikut : 
 ```
 {
@@ -185,11 +204,16 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
 }
 ```
 
+ ![](../Screenshot_8/8.png) <br><br>
+
 ## Token 
 1. Jalankan perintah berikut untuk membuat migrasi baru : 
 ```
 php artisan make:migration add_column_token_to_users
 ```
+
+ ![](../Screenshot_8/9.png) <br><br>
+
 2. Tambahkan baris berikut pada migration yang baru terbuat : 
 ```
 <?php
@@ -225,6 +249,9 @@ class AddColumnTokenToUsers extends Migration
   }
 }
 ```
+
+ ![](../Screenshot_8/10.png) <br><br>
+
 3. Tambahkan atribut token di $fillable pada User.php : 
 ```
 <?php
@@ -252,6 +279,9 @@ class User extends Model
   protected $hidden = [];
 }
 ```
+
+ ![](../Screenshot_8/11.png) <br><br>
+
 4. Tambahkan baris berikut pada file AuthController.php : 
 ```
 <?php
@@ -299,10 +329,16 @@ class AuthController extends Controller
     }
 }
 ```
+
+ ![](../Screenshot_8/12.png) <br><br>
+
 5. Jalankan perintah di bawah untuk menjalankan migrasi terbaru : 
 ```
 php artisan migrate
 ```
+
+ ![](../Screenshot_8/13.png) <br><br>
+
 6. Jalankan aplikasi pada endpoint /auth/login dengan body berikut. Salinlah token
 yang didapat ke notepad : 
 ```
@@ -311,6 +347,8 @@ yang didapat ke notepad :
     "password": "wanderer"
 }
 ```
+
+ ![](../Screenshot_8/14.png) <br><br>
 
 ## Authorization
 1. Buatlah file Authorization.php pada folder App/Http/Middleware dan isilah dengan
@@ -348,11 +386,15 @@ class Authorization
           'message' => 'invalid token',
       ],400);
   }
-  $request->user = $user;
-  return $next($request);
+  $request->merge(['user' => $user]);
+
+        return $next($request);
   }
 }
 ```
+
+ ![](../Screenshot_8/15.png) <br><br>
+
 2. Tambahkan middleware yang baru dibuat pada bootstrap/app.php. : 
 ```
 /*
@@ -372,6 +414,9 @@ $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authorization::class, //
 ]);
 ```
+
+ ![](../Screenshot_8/16.png) <br><br>
+
 3. Buatlah fungsi home() pada HomeController.php : 
 ```
 <?php
@@ -395,6 +440,9 @@ class HomeController extends Controller
     }
 }
 ```
+
+ ![](../Screenshot_8/17.png) <br><br>
+
 4. Tambahkan baris berikut pada routes/web.php :
 ```
 <?php
@@ -404,5 +452,10 @@ $router->get('/hello', ['uses' => 'HomeController@hello']);
 $router->get('/home', ['middleware' => 'auth','uses' => 'HomeController@home']); //
 ...
 ```
+
+ ![](../Screenshot_8/18.png) <br><br>
+
 5. Jalankan aplikasi pada endpoint /home dengan melampirkan nilai token yang
 didapat setelah login pada header
+
+ ![](../Screenshot_8/19.png) <br><br>

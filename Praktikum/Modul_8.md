@@ -326,8 +326,6 @@ class Authorization
 {
   /**
   * Handle an incoming request.
-  Register, Authentication dan Authorization 12
-  
   *
   * @param \Illuminate\Http\Request $request
   * @param \Closure $next

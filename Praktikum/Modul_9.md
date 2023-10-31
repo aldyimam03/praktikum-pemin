@@ -365,7 +365,7 @@ class Authorization
 1. Lakukan generate jwt key secara online menggunakan website Djecrety ― Django Secret Key Generator. <br> Setelah mendapatkan secret key kita akan memasukkan secret key tersebut pada file `.env` dengan membuat variable baru
 bernama `JWT_SECRET`
 
-(contoh_gambar_1)
+ ![](../Screenshot_9/contoh_gambar_1.png) <br><br>
 
 2. Lakukan instalasi package jwt firebase dengan menggunakan command berikut
 ```
